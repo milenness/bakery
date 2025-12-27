@@ -43,7 +43,7 @@
                 </nav>
                 <button class="button" type="button">Замовити дзвінок</button>
 
-                <button class="burger-button" type="button">
+                <button class="burger-button menu-btn-open" type="button">
                     <svg class="burger" width="24" height="24">
                         <use href="./img/icons.svg#icon-burger"></use>
                     </svg>
@@ -327,10 +327,10 @@
                         <img src="./img/logo.svg" alt="logo" width="114" height="56">
                     </a>
                     <ul class="footer-menu-list">
-                        <li class="menu-item"><a class="menu-link" href="#tradition" target="_blank">Франшиза</a></li>
-                        <li class="menu-item"><a class="menu-link"  href="#chef" target="_blank">Шеф-кухарі</a></li>
-                        <li class="menu-item"><a class="menu-link"  href="#formats" target="_blank">Формати</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#footer"  target="_blank">Контакти</a></li>
+                        <li class="menu-item"><a class="menu-link footer-menu-link" href="#tradition" target="_blank">Наші традиції</a></li>
+                        <li class="menu-item"><a class="menu-link footer-menu-link"  href="#chef" target="_blank">Наші шеф-кухарі</a></li>
+                        <li class="menu-item"><a class="menu-link footer-menu-link"  href="#formats" target="_blank">Формати</a></li>
+                        <li class="menu-item"><a class="menu-link footer-menu-link" href="#footer"  target="_blank">Контакти</a></li>
                     </ul>
                 </nav>
 
@@ -345,7 +345,8 @@
                                 target="_blank">Україна,
                                 м. Київ,<br>
                                 вул. Січових Стрільців 54</a></li>
-                        <div class="social-links-wrapper">
+                                </ul>
+                        <ul class="social-links-wrapper">
                             <li class="footer-item"><a class="footer-link" href="instagram.com" target="_blank">
                                     <svg class="social-icon" width="32" height="32">
                                         <use href="./img/icons.svg#icon-instagram"></use>
@@ -357,8 +358,7 @@
                                         <use href="./img/icons.svg#icon-facebook"></use>
                                     </svg>
                                 </a></li>
-                        </div class="social-links-wrapper">
-                    </ul>
+                        </ul>
                 </address>
 
                 <div class="policy-text-container">
@@ -370,50 +370,78 @@
 
                 <img class="fitst-footer-bread" src="./img/bread-1.png" alt="">
                 <img class="second-footer-bread" src="./img/bread-2.png" alt="">
+                <img class="third-footer-bread" src="./img/bread-3.png" alt="">
+                <img class="fourth-footer-bread" src="./img/bread-4.png" alt="">
             </div>
         </div>
     </footer>
 
-    <div class="backdrop is-hidden">
-        <div class="modal">
-            <button class="modal-btn-close">
-                <svg class="close-icon" width="16" height="16">
-                    <use href="./img/icons.svg#icon-close"></use>
-                </svg>
-            </button>
+   <div class="backdrop is-hidden">
+    <div class="modal">
+        <button class="modal-btn-close" type="button">
+            <svg class="close-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+        </button>
 
-            <h2 class="section-title modal-title">Замовити дзвінок</h2>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p class="modal-text">Заповни форму, щоб ми звʼязались з тобою!</p>
 
-            <p class="form-text modal-text">Заповни форму, щоб ми звʼязались з тобою!</p>
+        <form class="form-modal">
+            <label class="label" for="username">
+                <input type="text" class="input" name="username" id="username" required
+                    placeholder="Ім’я">
+            </label>
+            
+            <label class="label" for="tel">
+                <input type="tel" class="input" name="tel" id="tel" required placeholder="Телефон" />
+            </label>
 
-            <form class="form-modal">
-                <label class="label" for="username">
-                    <input type="text" class="input" name="username" id="username" required
-                        pattern="^[a-zA-Z]+\s[a-zA-Z]+$" title="Username must included two words separated by space"
-                        placeholder="Ім’я">
-                </label>
-                <label class="label" for="tel">
-                    <input type="tel" class="input" name="tel" id="tel" placeholder="Телефон" />
-                </label>
+            <label class="label" for="email">
+                <input type="email" class="input" name="email" id="email" required placeholder="Електронна пошта">
+            </label>
 
-                <label class="label" for="email">
-                    <input type="email" class="input" name="email" id="email" required placeholder="Електронна пошта">
-                </label>
+            <button class="button form-btn" type="submit">Замовити дзвінок</button>
+        </form>
 
-                <button class="button form-btn" type="submit">Замовити дзвінок</button>
-            </form>
+        <p class="policy-text">
+            Натискаючи на кнопку я погоджуюсь 
+            <a class="policy-link" href="#">з політикою конфіденційності</a>
+        </p>
 
-            <p class="policy-text">Натискаючи на кнопку я погоджуюсь <a class="policy-link" href="#">з
-                    політикою конфіденційності</a></p>
-
-            <img class="modal-img first" src="./img/modal-img.png" width="105.96" height="224.64" alt="">
-            <img class="modal-img" src="./img/modal-img-2.png" width="137.87" height="137.92" alt="">
-        </div>
+        <img class="modal-img first" src="./img/modal-img.png" width="106" height="225" alt="Декоративне зображення">
+        <img class="modal-img" src="./img/modal-img-2.png" width="138" height="138" alt="Декоративне зображення">
     </div>
+</div>
+
+<div class="mobile-menu">
+    <div class="container">
+        <button class="menu-btn-close" type="button">
+            <svg class="close-icon" width="12" height="12">
+                <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <nav class="mobile-menu-nav">
+            <a href="#home" class="mobile-logo-link">
+                <img class="logo-img" src="./img/mob-logo.svg" alt="logo" width="72" height="38">
+            </a>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="#tradition">Наші традиції</a></li>
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="#chef">Шеф-кухарі</a></li>
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="#formats">Формати</a></li>
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="#footer">Контакти</a></li>
+            </ul>
+        </nav>
+          <img class="modal-img first" src="./img/modal-img.png" width="106" height="225" alt="Декоративне зображення">
+        <img class="modal-img" src="./img/modal-img-2.png" width="138" height="138" alt="Декоративне зображення">
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/formats-slider.js"></script>
     <script src="./js/modal.js"></script>
+     <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -687,6 +687,7 @@ img {
 
 .form-section {
     padding: 20px 0 0;
+    overflow-x: hidden;
 }
 
 .form-map-wrapper {
@@ -706,7 +707,7 @@ img {
     height: 176px;
     margin-left: -16px;
     margin-right: -16px;
-    max-width: 392px;
+    max-width: 376px;
 }
 
 .form-title {
@@ -857,16 +858,21 @@ input:hover {
 
 .footer-container {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-nav {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 18px;
     flex-grow: 2;
+margin-bottom: 18px;
+align-items: center;
 }
 
 .footer-logo-link {
+    width: 72px;
     flex-grow: 1;
     flex-shrink: 0;
 }
@@ -874,23 +880,36 @@ input:hover {
 .footer-menu-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
     flex-grow: 1;
+    align-items: center;
+}
+
+.footer-menu-link {
+font-weight: 300;
+font-size: 14px;
+
 }
 
 .footer-address {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 8px;
 }
 
 .footer-link-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-link {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--primaty-light);
     transition: color 0.3s ease;
 }
@@ -902,24 +921,26 @@ input:hover {
 .policy-text-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
+    align-items: center;
 }
 
 .policy-name {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--primaty-light);
 }
 
 .policy-data {
     color: var(--secondary-dark);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .social-links-wrapper {
     display: flex;
     gap: 22px;
+    justify-content: center;
 }
 
 .social-icon {
@@ -932,16 +953,115 @@ input:hover {
 }
 
 .fitst-footer-bread {
+    display: none;
+}
+
+.second-footer-bread {
+   display: none;
+}
+
+.third-footer-bread {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.fourth-footer-bread {
+    position: absolute;
+    bottom: 0;
+   right: 0;
+}
+
+@media screen and (min-width: 768px) {
+.footer-container {
+flex-direction: row;
+    gap: 40px;
+     align-items: flex-start;
+}
+
+.footer-nav {
+    gap: 40px;
+    flex-direction: row;
+    margin-bottom: 0;
+    align-items: flex-start;
+}
+
+.footer-logo-link {
+    width: 108px;
+}
+
+.footer-menu-list {
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.footer-menu-link {
+    font-weight: 400;
+font-size: 18px;
+}
+
+.footer-link-list {
+    gap: 16px;
+     align-items: flex-start;
+       text-align: start;
+}
+
+.footer-link {
+    font-size: 16px;
+}
+
+.footer-address {
+    margin-bottom: 0;
+}
+
+.social-links-wrapper {
+    justify-content: flex-start;
+}
+
+.policy-text-container {
+    gap: 16px;
+     align-items: flex-start;
+}
+
+.policy-name {
+    font-size: 16px;
+}
+
+.policy-data {
+    font-size: 14px;
+}
+
+.fitst-footer-bread {
+    display: none;
+}
+
+.second-footer-bread {
+   display: none;
+}
+
+.fitst-footer-bread {
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
 .second-footer-bread {
+    display: block;
     position: absolute;
     bottom: 0;
     right: 0;
 }
+
+.third-footer-bread {
+    display: none;
+}
+
+.fourth-footer-bread {
+    display: none;
+}
+}
+
 
 /*  #endregion */
 
@@ -1043,3 +1163,66 @@ input:hover {
 }
 
 /* #endregion */
+
+/* #region Mobile-menu */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    padding: 16px 0;
+    background-color: var(--primaty-light);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+.menu-btn-close {
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.mobile-menu-list {
+    display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.mobile-menu-link {
+    font-weight: 300;
+font-size: 14px;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus  {
+     font-weight: 600;
+    color: var(--primary-accent)
+}
+
+@media screen and (min-width: 768px) {
+   .mobile-menu {
+    display: none;
+   } 
+}
+
+/*  #endregion */
